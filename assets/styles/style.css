@@ -11,19 +11,32 @@
      border-bottom: rgb(97, 146, 1) 5px solid;
      background-color: #619201;
  }
+
+ nav#navbarResponsive.navbar.navbar-expand-lg > div.dropdown > button#dropdownMenu2{
+    font-size: 24px;
+}
+
+.btn-green {
+    background-color: #619201;
+    color: white;
+}
+
+nav#navbarResponsive.navbar.navbar-expand-lg > img {
+    width: 90px;
+    height: 90px;
+    border-color: #619201;
+}
 /*End navbar*/
 
- .TextoCategoria {
+ .category {
      margin-left: 150px;
+     font-weight: bold;
  }
  .carousel-control-next-icon,
  .carousel-control-prev-icon {
      filter: invert(1);
  }
- .btn-teste {
-     background-color: #619201;
-     color: #FFF;
- }
+
  .btn-link {
      color: #FFF;
  }
