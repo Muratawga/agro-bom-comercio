@@ -1,5 +1,5 @@
 ### 🐱‍🐉 Projeto Agro Bom Negócio - ABC
-##### *Desenvolvido e entregue por* [Phog Tech](https://phogtech.vercel.app/)
+##### *Desenvolvido e entregue por [Phog Tech](https://phogtech.vercel.app/)*
 #### Como commitar?
 Os commits serão organizados no padrão *Conventional Commits* para melhor organização e leitura do histórico de modificações. A documentação de como seguir essa estrutura pode ser lida [aqui](https://www.conventionalcommits.org/pt-br/v1.0.0/).
 
