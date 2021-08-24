@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300&subset=latin-ext);
 html>body {
     background-color: #619201;
+    font-family: Montserrat;
 }
 
 
