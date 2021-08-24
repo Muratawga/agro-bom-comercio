@@ -3,7 +3,7 @@
 
  body {
      background-color: #ECECEB;
-     overflow-x: scroll;
+     overflow-x: none;
      font-family: Montserrat;
  }
 /*Start navbar*/
