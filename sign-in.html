@@ -1,89 +1,45 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #619201;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin-right: 100px;
-            margin-left: 100px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .container {
-            padding: 16px;
-            background-color: white;
-            border-radius: 15px;
-        }
-        
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-        
-        input[type=text]:focus,
-        input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-        
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
-        
-        .signinbtn {
-            background-color: #3452ff;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-            border-radius: 5px;
-        }
-        
-        .registerbtn:hover {
-            opacity: 1;
-        }
-        
-        a {
-            color: dodgerblue;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="./assets/styles/signin.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 </head>
 
 <body>
-
-    <form action="/action_page.php">
-        <div class="container">
-            <h1>Entrar</h1>
-            <hr>
-
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Digite seu Email" name="email" id="email" required>
-
-            <label for="psw"><b>Senha</b></label>
-            <input type="password" placeholder="Digite sua senha" name="psw" id="psw" required>
-            <button type="submit" class="signinbtn">Entrar</button>
-            <p>Ainda nao possui uma conta? <a href="#">Crie sua conta</a></p>
+    <div class="container">
+        <section class="sectionAlign">
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <div id="registertext" class="form-text">
+                                <h1>Entrar </h1>
+                            </div>
+                            <div id="subtext" class="form-text">
+                                <h6>Por favor complete o formulário para entrar em sua conta. </h6>
+                            </div>
+                            <label for="exampleInputEmail1" class="form-label">Endereço de Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div id="termsandconditionstext" class="form-text"><a href="#">Termos e privacidade</a> </div>
+                        <br>
+                        <button type="button" class="btn btn-primary btn-lg">Entrar</button>
+                        <br><br>
+                        <div id="logintext" class="form-text"> Ainda não possui uma conta? <a href="register.html">Cadastre-se</a></< /div>
+                    </form>
+                    </div>
+                </div>
+        </section>
         </div>
-
-    </form>
-
 </body>
 
 </html>
