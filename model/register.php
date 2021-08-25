@@ -29,7 +29,7 @@ if (strlen($_POST['password']) <= 7){
             //nao existe esse record, pode gravar
             $stmt->close();
             $hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
-            $stmt = $conn->prepare("INSERT INTO standardtable (username, password, email) values (?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO standardtable (name, password, email) values (?, ?, ?)");
             $stmt->bind_param('sss', $_POST['username'], $hash, $_POST['email']);
             $stmt->execute();
             $stmt->close();
