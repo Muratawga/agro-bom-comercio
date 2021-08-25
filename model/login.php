@@ -2,7 +2,7 @@
 session_start();
 require_once 'config.php';
 
-if ($stmt = $conn->prepare('SELECT id, password FROM standardtable WHERE email = ?')) {
+if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
 	$stmt->bind_param('s', $_POST['email']);
 	$stmt->execute();
 	$stmt->store_result();
@@ -19,7 +19,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM standardtable WHERE email =
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['name'] = $_POST['email'];
 			$_SESSION['id'] = $id;
-			header('Location: ../public/index.php');
+			header('Location: ../controller/index.html');
 
 			
 		} else {
@@ -27,7 +27,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM standardtable WHERE email =
 			?>
 			<script>
 			javascript:alert('Senha errada!');
-			javascript:window.location='../public/login.html';
+			javascript:window.location='../controller/login.html';
 			</script>
 			<?php
 		}
@@ -36,7 +36,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM standardtable WHERE email =
 		?>
 		<script>
 		javascript:alert('Email errado!');
-		javascript:window.location='../public/login.html';
+		javascript:window.location='../controller/login.html';
 		</script>
 		<?php
 	}
