@@ -15,7 +15,7 @@
         <section class="sectionAlign">
             <div class="card">
                 <div class="card-body">
-                    <form action="../php/login.php" method="post">
+                    <form action="../model/register.php" method="post">
                         <div class="mb-3">
                             <div id="registertext" class="form-text">
                                 <h1>Cadastre-se </h1>
@@ -23,39 +23,39 @@
                             <div id="subtext" class="form-text">
                                 <h6>Por favor complete este formulário para criar a sua conta. </h6>
                             </div>
-                            <label for="exampleInputEmail1" class="form-label">Endereço de Email</label>
-                            <input type="email" name="exampleInputEmail1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="email" class="form-label">Endereço de Email</label>
+                            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputName" class="form-label">Nome completo</label>
-                            <input type="name" name="exampleInputName" class="form-control" id="exampleInputName">
+                            <label for="nome" class="form-label">Nome completo</label>
+                            <input type="name" name="nome" class="form-control" id="nome">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Senha</label>
-                            <input type="password" name="exampleInputPassword1" class="form-control" id="exampleInputPassword1">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" name="password" class="form-control" id="password">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword2" class="form-label">Confirme sua senha</label>
-                            <input type="password" name="exampleInputPassword2" class="form-control" id="exampleInputPassword2">
+                            <label for="passwordrepeat" class="form-label">Confirme sua senha</label>
+                            <input type="password" name="passwordrepeat" class="form-control" id="passwordrepeat">
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="radio" value="Fornecedor" id="flexRadioDefault1">
                             <label class="form-check-label" for="flexRadioDefault1">
                               Cliente
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <input class="form-check-input" type="radio" name="radio" value="Fornecedor" id="flexRadioDefault2" checked>
                             <label class="form-check-label" for="flexRadioDefault2">
                               Fornecedor
                             </label>
                         </div>
                         <div id="termsandconditionstext" class="form-text"> Ao criar sua conta você concorda com os <a href="#">Termos e privacidade</a> </div>
                         <br>
-                        <a href="login.php"> <button type="button" class="btn btn-primary btn-lg">Cadastrar-se</button></a>
+                        <input type="submit" value="Registre-se" class="btn btn-dark btn-lg">
                         <br><br>
-                        <div id="logintext" class="form-text"> Já possui uma conta? <a href="sign-in.html">Entrar</a></< /div>
+                        <div id="logintext" class="form-text"> Já possui uma conta? <a href="sign-in.html">Entrar</a></div>
                     </form>
                     </div>
                 </div>
