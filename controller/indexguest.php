@@ -1,3 +1,5 @@
+<?php require_once '../model/config.php';?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,7 +15,9 @@
 
 <body>
 
-<?php include '../view/templates/navbarempty.html'; ?>
+<?php include '../view/templates/navbar.php'; ?>
+<?php require_once '../view/templates/randomproduct.php'; 
+require '../model/urls.php';?>
 
     <section id="carousel">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -42,75 +46,8 @@
     <div id="category" class="text-center">
         <h3>Produtos</h3>
     </div> <br>
-    <div class="caixa my-5">
-        <div class="card-deck mx-5 my-5">
-            <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap" />
-                <div class="card-body">
-                    <h5 class="card-title">Produto </h5>
-                    <h6 class="card-title">Descricao </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="#">
-                            <strong class="btn btn-outline-success">
-                                <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                              ></strong
-                            >
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap" />
-                <div class="card-body">
-                    <h5 class="card-title">Produto</h5>
-                    <h6 class="card-title">Descricao </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="#">
-                            <strong class="btn btn-outline-success">
-                                <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                              ></strong
-                            >
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap" />
-                <div class="card-body">
-                    <h5 class="card-title">Produto</h5>
-                    <h6 class="card-title">Descricao </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="#">
-                            <strong class="btn btn-outline-success">
-                                <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                              ></strong
-                            >
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap" />
-                <div class="card-body">
-                    <h5 class="card-title">Produto</h5>
-                    <h6 class="card-title">Descricao </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="#">
-                            <strong class="btn btn-outline-success">
-                              <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                            ></strong
-                          >
-                        </a>
-                    </p>
-                </div>
-            </div>
 
-        </div>
-    </div>
+    <?php include '../view/templates/showp.php' ?>
     
     <script src="https://use.fontawesome.com/4082de62c3.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

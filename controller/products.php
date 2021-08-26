@@ -1,5 +1,56 @@
+<?php require '../model/config.php'; 
+require '../model/urls.php';
+
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+	exit;
+}
+
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+  // last request was more than 30 minutes ago
+  session_unset();     // unset $_SESSION variable for the run-time 
+  session_destroy();   // destroy session data in storage
+}
+$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
+
+$email=$_SESSION['name'];
+$sql = "SELECT nome FROM users WHERE email='$email'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+    $nome = $row['nome'];  
+    }
+} else {
+    
+}
+
+if (isset($_GET['id'])){
+
+    $id=$_GET["id"];
+
+
+    $sql = "SELECT * FROM products WHERE id='$id'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            $nomeproduto = $row['name']; 
+            $fornecedor = $row['fornecedor']; 
+            $image = '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"';
+            $preco = $row['lastmonth'];
+        }
+    } else {    
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
+
 
 <head>
     <meta charset="UTF-8">
@@ -12,35 +63,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="navbarResponsive">
 
-            <div class="dropdown">
-                <button class="btn btn-green fa fa-bars btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="button">Action</button>
-                    <button class="dropdown-item" type="button">Another action</button>
-                    <button class="dropdown-item" type="button">Something else here</button>
-                </div>
-            </div>
-            <img src="../view/img/logo.png" alt="logo" class="mx-1 my-0" />
-            </a>
-
-            <form class="mx-5 my-auto d-inline w-100" id="navbarResponsive">
-                <div class="input-group">
-                    <input type="text" list="historico" class="form-control border border-right-0" placeholder="Digite sua busca:" />
-                    <span class="input-group-append">
-                        <button class="btn border border-left-0" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </form>
-            <button type="button" class="btn btn-link"><a href="register.html" class="text-light">Ainda não possui <br> cadastro?</a></button>
-            <button type="button" class="btn btn-light btn-lg"><a href="sign-in.html" class="text-dark">Entrar</a></button>
-        </nav>
-    </header>
+<?php include '../view/templates/navbar.php'; ?>
 
     <section id="product">
         <div class="container mt-5 mb-5">
@@ -48,13 +72,13 @@
                 <div class="row g-0">
                     <div class="col-md-6 border-end">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="main_image"> <img src="#" id="main_product_image" width="350"> </div>
+                            <div class="main_image"> <?php echo $image?> id="main_product_image" width="350"> </div>
                             <div class="thumbnail_images">
                                 <ul id="thumbnail">
-                                    <li><img onclick="changeImage(this)" src="#" width="70"></li>
-                                    <li><img onclick="changeImage(this)" src="#" width="70"></li>
-                                    <li><img onclick="changeImage(this)" src="#" width="70"></li>
-                                    <li><img onclick="changeImage(this)" src="#" width="70"></li>
+                                    <li><img onclick="changeImage(this)" <?php echo $image?> width="70"></li>
+                                    <li><img onclick="changeImage(this)" <?php echo $image?> width="70"></li>
+                                    <li><img onclick="changeImage(this)" <?php echo $image?> width="70"></li>
+                                    <li><img onclick="changeImage(this)" <?php echo $image?> width="70"></li>
                                 </ul>
                             </div>
                         </div>
@@ -62,12 +86,12 @@
                     <div class="col-md-6">
                         <div class="p-3 right-side">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h3>Produto</h3> <span class="heart"><i class='bx bx-heart'></i></span>
+                                <h3><?php echo $nomeproduto?></h3> <span class="heart"><i class='bx bx-heart'></i></span>
                             </div>
                             <div class="mt-2 pr-3 content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                <p><?php echo $fornecedor?></p>
                             </div>
-                            <h3>R$29,99</h3>
+                            <h3><?php echo $preco?> R$</h3>
                             <form action="/action_page.php">
                                 <input type="checkbox" id="flag1" name="flag1" value="Flag"><i class="fa fa-flag fa-lg"></i>
                                 <label for="flag1"> <h4> Marcar com uma bandeira</h4></label><br>

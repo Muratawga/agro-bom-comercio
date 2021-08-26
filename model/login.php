@@ -19,7 +19,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['name'] = $_POST['email'];
 			$_SESSION['id'] = $id;
-			header('Location: ../index.php');
+			header('Location: ../controller/indexlog.php');
 
 			
 		} else {

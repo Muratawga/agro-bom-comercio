@@ -1,3 +1,30 @@
+<?php require_once '../model/config.php';
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: sign-in.php');
+	exit;
+}
+
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+  // last request was more than 30 minutes ago
+  session_unset();     // unset $_SESSION variable for the run-time 
+  session_destroy();   // destroy session data in storage
+}
+$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
+
+$email=$_SESSION['name'];
+$sql = "SELECT nome FROM users WHERE email='$email'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+    $nome = $row['nome'];  
+    }
+} else {
+    
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,8 +38,10 @@
     <title>Agro Bom Negócio - ABC</title>
 </head>
 
-<?php include '../view/templates/navbarcliente.php'; ?>
-<?php require_once '../view/templates/randomproduct.php'; ?>
+<?php include '../view/templates/navbar.php'; ?>
+<?php require_once '../view/templates/randomproduct.php'; 
+require '../model/urls.php';?>
+
 
 
     <section id="carousel">
@@ -114,75 +143,7 @@
     <div id="category" class="text-center">
         <h3>Produtos</h3>
     </div> <br>
-    <div class="caixa my-5">
-        <div class="card-deck mx-5 my-5">
-            <div class="card">
-                <img class="card-img-top" <?php echo $image1?> />
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $nome1 ?> </h5>
-                    <h6 class="card-title"><?php echo $fornecedor1 ?> </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="#">
-                            <strong class="btn btn-outline-success">
-                                <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                              ></strong
-                            >
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" <?php echo $image2?> />
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $nome2 ?></h5>
-                    <h6 class="card-title"><?php echo $fornecedor2 ?> </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="#">
-                            <strong class="btn btn-outline-success">
-                                <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                              ></strong
-                            >
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" <?php echo $image3?> />
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $nome3 ?></h5>
-                    <h6 class="card-title"><?php echo $fornecedor3 ?> </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="#">
-                            <strong class="btn btn-outline-success">
-                                <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                              ></strong
-                            >
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" <?php echo $image4?> />
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $nome4 ?></h5>
-                    <h6 class="card-title"><?php echo $fornecedor4 ?> </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="#">
-                            <strong class="btn btn-outline-success">
-                              <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                            ></strong
-                          >
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <?php include '../view/templates/showp.php' ?>
     <script src="https://use.fontawesome.com/4082de62c3.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -10,5 +10,4 @@
         echo "CONNECTION ERROR";
         die;
     }else{}
-
 ?>
