@@ -3,7 +3,18 @@ require '../model/urls.php';
 
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-	exit;
+	
+}else{
+    $email=$_SESSION['name'];
+    $sql = "SELECT nome FROM users WHERE email='$email'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+        $nome = $row['nome'];  
+        }
+    } else {
+    }
 }
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
@@ -13,17 +24,6 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
 }
 $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 
-$email=$_SESSION['name'];
-$sql = "SELECT nome FROM users WHERE email='$email'";
-$result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-    $nome = $row['nome'];  
-    }
-} else {
-    
-}
 
 if (isset($_GET['id'])){
 
