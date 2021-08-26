@@ -48,13 +48,13 @@ require '../model/urls.php';?>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://media.discordapp.net/attachments/545672552853274633/878017524149682296/Sem_titulo.png" alt="First slide">
+                    <img class="d-block w-100" src="../view/img/bannerzasso.png" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://media.discordapp.net/attachments/545672552853274633/878017524149682296/Sem_titulo.png" alt="Second slide">
+                    <img class="d-block w-100" src="../view/img/bannerzasso.png" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://media.discordapp.net/attachments/545672552853274633/878017524149682296/Sem_titulo.png" alt="Third slide">
+                    <img class="d-block w-100" src="../view/img/bannerzasso.png" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

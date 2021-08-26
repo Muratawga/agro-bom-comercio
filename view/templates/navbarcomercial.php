@@ -55,16 +55,8 @@ if (mysqli_num_rows($result) > 0) {
         <img src="./assets/img/logo.png" alt="logo" class="mx-1 my-0" />
         </a>
 
-        <form class="mx-5 my-auto d-inline w-100" id="navbarResponsive">
-            <div class="input-group">
-                <input type="text" list="historico" class="form-control border border-right-0" placeholder="Digite sua busca:" />
-                <span class="input-group-append">
-                       <button class="btn border border-left-0" type="button">
-                           <i class="fa fa-search"></i>
-                       </button>
-                   </span>
-            </div>
-        </form>
+        <a class="nav-link btn-primary" href="/indexlog.php" style="background-color: #619201;">Produtos</a>
+      <a class="nav-link btn-primary" href="/privacyterms.php" style="background-color: #619201;">Politica e Termos</a>
         <button type="button" class="btn btn-link"><a href="register.php" class="text-light">Ainda não possui <br> cadastro?</a></button>
         <button type="button" class="btn btn-light btn-lg"><a href="sign-in.php" class="text-dark"> Entrar</a></button>
     </nav>
