@@ -19,7 +19,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['name'] = $_POST['email'];
 			$_SESSION['id'] = $id;
-			header('Location: ../controller/index.html');
+			header('Location: ../index.php');
 
 			
 		} else {
@@ -27,7 +27,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
 			?>
 			<script>
 			javascript:alert('Senha errada!');
-			javascript:window.location='../controller/login.html';
+			javascript:window.location='../controller/sign-in.php';
 			</script>
 			<?php
 		}
@@ -36,7 +36,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
 		?>
 		<script>
 		javascript:alert('Email errado!');
-		javascript:window.location='../controller/login.html';
+		javascript:window.location='../controller/login.php';
 		</script>
 		<?php
 	}

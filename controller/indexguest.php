@@ -12,35 +12,9 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="navbarResponsive">
 
-            <div class="dropdown">
-                <button class="btn btn-green fa fa-bars btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="button">Sair</button>
+<?php include '../view/templates/navbarempty.html'; ?>
 
-                </div>
-            </div>
-
-            <img src="../view/img/logo.png" alt="logo" class="mx-1 my-0" />
-            </a>
-
-            <form class="mx-5 my-auto d-inline w-100" id="navbarResponsive">
-                <div class="input-group">
-                    <input type="text" list="historico" class="form-control border border-right-0" placeholder="Digite sua busca:" />
-                    <span class="input-group-append">
-                        <button class="btn border border-left-0" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </form>
-            <button type="button" class="btn btn-link"><a href="register.html" class="text-light">Ainda não possui <br> cadastro?</a></button>
-            <button type="button" class="btn btn-light btn-lg"><a href="sign-in.html" class="text-dark"> Entrar</a></button>
-        </nav>
-    </header>
     <section id="carousel">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -143,13 +117,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" <script src="https://use.fontawesome.com/4082de62c3.js"></script>
 </body>
-<footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2021 Copyright:
-        <a class="text-dark" href="https://phogtech.vercel.app">phogtech. </a>
-    </div>
-    <!-- Copyright -->
-</footer>
+
+<?php include '../view/templates/footer.html'; ?>
 
 </html>

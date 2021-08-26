@@ -34,7 +34,7 @@
                         <br>
                         <input type="submit" value="Login" class="btn btn-dark btn-lg">
                         <br><br>
-                        <div id="logintext" class="form-text"> Ainda não possui uma conta? <a href="register.html">Cadastre-se</a></div>
+                        <div id="logintext" class="form-text"> Ainda não possui uma conta? <a href="register.php">Cadastre-se</a></div>
                     </form>
                     </div>
                 </div>

@@ -11,36 +11,10 @@
     <title>Agro Bom Negócio - ABC</title>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="navbarResponsive">
+<?php include '../view/templates/navbarcliente.php'; ?>
+<?php require_once '../view/templates/randomproduct.php'; ?>
 
-            <div class="dropdown">
-                <button class="btn btn-green fa fa-bars btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="button">Sair</button>
 
-                </div>
-            </div>
-
-            <img src="../view/img/logo.png" alt="logo" class="mx-1 my-0" />
-            </a>
-
-            <form class="mx-5 my-auto d-inline w-100" id="navbarResponsive">
-                <div class="input-group">
-                    <input type="text" list="historico" class="form-control border border-right-0" placeholder="Digite sua busca:" />
-                    <span class="input-group-append">
-                        <button class="btn border border-left-0" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </form>
-            <button type="button" class="btn btn-link"><a href="register.html" class="text-light">Ainda não possui <br> cadastro?</a></button>
-            <button type="button" class="btn btn-light btn-lg"><a href="sign-in.html" class="text-dark"> Entrar</a></button>
-        </nav>
-    </header>
     <section id="carousel">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -143,10 +117,10 @@
     <div class="caixa my-5">
         <div class="card-deck mx-5 my-5">
             <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap" />
+                <img class="card-img-top" <?php echo $image1?> />
                 <div class="card-body">
-                    <h5 class="card-title">Produto </h5>
-                    <h6 class="card-title">Descricao </h6>
+                    <h5 class="card-title"><?php echo $nome1 ?> </h5>
+                    <h6 class="card-title"><?php echo $fornecedor1 ?> </h6>
                     <p class="card-text"></p>
                     <p class="card-text">
                         <a href="#">
@@ -159,10 +133,10 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap" />
+                <img class="card-img-top" <?php echo $image2?> />
                 <div class="card-body">
-                    <h5 class="card-title">Produto</h5>
-                    <h6 class="card-title">Descricao </h6>
+                    <h5 class="card-title"><?php echo $nome2 ?></h5>
+                    <h6 class="card-title"><?php echo $fornecedor2 ?> </h6>
                     <p class="card-text"></p>
                     <p class="card-text">
                         <a href="#">
@@ -175,10 +149,10 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap" />
+                <img class="card-img-top" <?php echo $image3?> />
                 <div class="card-body">
-                    <h5 class="card-title">Produto</h5>
-                    <h6 class="card-title">Descricao </h6>
+                    <h5 class="card-title"><?php echo $nome3 ?></h5>
+                    <h6 class="card-title"><?php echo $fornecedor3 ?> </h6>
                     <p class="card-text"></p>
                     <p class="card-text">
                         <a href="#">
@@ -191,10 +165,10 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap" />
+                <img class="card-img-top" <?php echo $image4?> />
                 <div class="card-body">
-                    <h5 class="card-title">Produto</h5>
-                    <h6 class="card-title">Descricao </h6>
+                    <h5 class="card-title"><?php echo $nome4 ?></h5>
+                    <h6 class="card-title"><?php echo $fornecedor4 ?> </h6>
                     <p class="card-text"></p>
                     <p class="card-text">
                         <a href="#">
@@ -214,13 +188,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" <script src="https://use.fontawesome.com/4082de62c3.js"></script>
 </body>
-<footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2021 Copyright:
-        <a class="text-dark" href="https://phogtech.vercel.app">phogtech. </a>
-    </div>
-    <!-- Copyright -->
-</footer>
+<?php include '../view/templates/footer.html'; ?>
 
 </html>

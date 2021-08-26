@@ -1,3 +1,32 @@
+<?php
+require '../model/config.php';
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: sign-in.php');
+	exit;
+}
+
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+  // last request was more than 30 minutes ago
+  session_unset();     // unset $_SESSION variable for the run-time 
+  session_destroy();   // destroy session data in storage
+}
+$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
+
+$email=$_SESSION['name'];
+$sql = "SELECT nome FROM users WHERE email='$email'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+    $nome = $row['nome'];  
+    }
+} else {
+    
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,8 +65,7 @@
                 </span>
             </div>
         </form>
-        <button type="button" class="btn btn-link"><a href="register.html" class="text-light">Ainda não possui <br> cadastro?</a></button>
-        <button type="button" class="btn btn-light btn-lg"><a href="sign-in.html" class="text-dark"> Entrar</a></button>
+        <h3>Bem vindo! <?php echo $nome ?></h3>
     </nav>
 </header>
 

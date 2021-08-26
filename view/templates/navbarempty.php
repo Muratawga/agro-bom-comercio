@@ -13,31 +13,21 @@
 
 <header>
     <nav class="navbar navbar-expand-lg" id="navbarResponsive">
-
-        <div class="dropdown">
-            <button class="btn btn-green fa fa-bars btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Sair</button>
-                <button class="dropdown-item" type="button">Acessar o crud</button>
-            </div>
-        </div>
-
-        <img src="./assets/img/logo.png" alt="logo" class="mx-1 my-0" />
+        <img src="../view/img/logo.png" alt="logo" class="mx-1 my-0" />
         </a>
 
         <form class="mx-5 my-auto d-inline w-100" id="navbarResponsive">
             <div class="input-group">
                 <input type="text" list="historico" class="form-control border border-right-0" placeholder="Digite sua busca:" />
                 <span class="input-group-append">
-                       <button class="btn border border-left-0" type="button">
-                           <i class="fa fa-search"></i>
-                       </button>
-                   </span>
+                    <button class="btn border border-left-0" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
             </div>
         </form>
-        <button type="button" class="btn btn-link"><a href="register.html" class="text-light">Ainda não possui <br> cadastro?</a></button>
-        <button type="button" class="btn btn-light btn-lg"><a href="sign-in.html" class="text-dark"> Entrar</a></button>
+        <button type="button" class="btn btn-link"><a href="register.php" class="text-light">Ainda não possui <br> cadastro?</a></button>
+        <button type="button" class="btn btn-light btn-lg"><a href="sign-in.php" class="text-dark"> Entrar</a></button>
     </nav>
 </header>
 
