@@ -29,8 +29,8 @@ nav#navbarResponsive.navbar.navbar-expand-lg>img {
     border-color: #619201;
 }
 
-h5 {
-    color: white;
+#teste {
+    color: white !important;
 }
 
 

@@ -52,8 +52,8 @@ if (mysqli_num_rows($result) > 0) {
             </div>
         </div>
 
-        <img src="./assets/img/logo.png" alt="logo" class="mx-1 my-0" />
-        </a>
+     
+        <img src="../view/img/logo.png" alt="logo" class="mx-1 my-0"> </a>
 
         <a class="nav-link btn-primary" href="/indexlog.php" style="background-color: #619201;">Produtos</a>
       <a class="nav-link btn-primary" href="/privacyterms.php" style="background-color: #619201;">Politica e Termos</a>

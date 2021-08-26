@@ -17,10 +17,10 @@ if (!isset($_SESSION['loggedin'])) {?>
 
 <header>
     <nav class="navbar navbar-expand-lg" id="navbarResponsive"> 
-        <img src="../view/img/logo.png" alt="logo" class="mx-1 my-0"> </a>
+    <a href="indexguest.php"><img src="../view/img/logo.png" alt="logo" width="65px"> </a>
 
 
-        <a class="nav-link btn-primary" href="./indexguest.php" style="background-color: #619201;">Produtos</a>
+        <a class="nav-link btn-primary ml-auto"  href="./mainproduct.php" style="background-color: #619201;">Produtos</a>
       <a class="nav-link btn-primary" href="./privacyterms.php" style="background-color: #619201;">Politica e Termos</a>
 
         <button type="button" class="btn btn-link"><a href="register.php" class="text-light">Ainda não possui <br> cadastro?</a></button>
@@ -62,11 +62,10 @@ if (!isset($_SESSION['loggedin'])) {?>
             </div>
         </div>
 
-        <img src="../view/img/logo.png" alt="logo" class="mx-1 my-0" />
-        </a>
-        <a class="nav-link btn-primary" href="./indexlog.php" style="background-color: #619201;">Produtos</a>
+        <a href="indexlog.php"><img src="../view/img/logo.png" alt="logo" width="65px"> </a>
+        <a class="nav-link btn-primary ml-auto" href="./mainproduct.php" style="background-color: #619201;">Produtos</a>
       <a class="nav-link btn-primary" href="./privacyterms.php" style="background-color: #619201;">Politica e Termos</a>
-        <h5>Bem vindo!<br> <?php echo $nome ?></h5p>
+        <h5 id="teste">Bem vindo!<br> <?php echo $nome ?></h5p>
     </nav>
 </header>
 
