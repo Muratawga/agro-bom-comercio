@@ -44,6 +44,8 @@ if (isset($_GET['id'])){
     }
 }
 
+$number1 = 1;
+
 ?>
 
 
@@ -73,14 +75,7 @@ if (isset($_GET['id'])){
                     <div class="col-md-6 border-end">
                         <div class="d-flex flex-column justify-content-center">
                             <div class="main_image"> <?php echo $image?> id="main_product_image" width="350"> </div>
-                            <div class="thumbnail_images">
-                                <ul id="thumbnail">
-                                    <li><img onclick="changeImage(this)" <?php echo $image?> width="70"></li>
-                                    <li><img onclick="changeImage(this)" <?php echo $image?> width="70"></li>
-                                    <li><img onclick="changeImage(this)" <?php echo $image?> width="70"></li>
-                                    <li><img onclick="changeImage(this)" <?php echo $image?> width="70"></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -93,26 +88,28 @@ if (isset($_GET['id'])){
                             </div>
                             <h3><?php echo $preco?> R$</h3>
                             <form action="/action_page.php">
-                                <input type="checkbox" id="flag1" name="flag1" value="Flag"><i class="fa fa-flag fa-lg"></i>
-                                <label for="flag1"> <h4> Marcar com uma bandeira</h4></label><br>
+                                <!--<input type="checkbox" id="flag1" name="flag1" value="Flag"><i class="fa fa-flag fa-lg"></i>
+                                <label for="flag1"> <h4> Marcar com uma bandeira</h4></label><br>-->
                                 <div class="ratings d-flex flex-row align-items-center">
-                                    <canvas id="myChart" width="400" height="400"></canvas>
+                                    <canvas id="myChart" width="700" height="400"></canvas>
                                 </div>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
+    <h1 class="text-center">Semelhantes</h1>
+        <?php include '../view/templates/showp.php' ?>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js" integrity="sha256-bC3LCZCwKeehY6T4fFi9VfOU0gztUa+S4cnkIhVPZ5E=" crossorigin="anonymous"></script>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['6 mêses atrás', '5 mêses atrás', '4 mêses atrás', '3 mêses atrás', '2 mêses atrás', 'Preço atual'],
                 datasets: [{
                     label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [12, <?php echo $number1?>, 3, 5, 2, 3],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -142,13 +139,5 @@ if (isset($_GET['id'])){
         });
     </script>
 </body>
-<footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2021 Copyright:
-        <a class="text-dark" href="https://phogtech.vercel.app">phogtech. </a>
-    </div>
-    <!-- Copyright -->
-</footer>
-
+<?php include '../view/templates/footer.php' ?>
 </html>
