@@ -39,6 +39,11 @@ if (isset($_GET['id'])){
             $fornecedor = $row['fornecedor']; 
             $image = '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"';
             $preco = $row['lastmonth'];
+            $tm = $row['twomonthago']; 
+            $thm = $row['threemonthago']; 
+            $fm = $row['fourmonthago']; 
+            $fim = $row['fivemonthago']; 
+            $six = $row['sixmonthago']; 
         }
     } else {    
     }
@@ -108,8 +113,8 @@ $number1 = 1;
             data: {
                 labels: ['6 mêses atrás', '5 mêses atrás', '4 mêses atrás', '3 mêses atrás', '2 mêses atrás', 'Preço atual'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, <?php echo $number1?>, 3, 5, 2, 3],
+                    label: 'Preço em Reais',
+                    data: [<?php echo $six?>, <?php echo $fim?>, <?php echo $fm?>, <?php echo $thm?>, <?php echo $tm?>, <?php echo $preco?>],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -126,7 +131,7 @@ $number1 = 1;
                         'rgba(153, 102, 255, 1)',
                         'rgba(255, 159, 64, 1)'
                     ],
-                    borderWidth: 1
+                    borderWidth: 2
                 }]
             },
             options: {
