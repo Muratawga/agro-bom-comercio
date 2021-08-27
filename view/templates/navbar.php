@@ -2,8 +2,7 @@
 
 if (!isset($_SESSION['loggedin'])) {?>
 	
-<!DOCTYPE html>
-<html lang="pt-br">
+
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +27,6 @@ if (!isset($_SESSION['loggedin'])) {?>
     </nav>
 </header>
 
-</html>
 
 
 
@@ -37,8 +35,7 @@ if (!isset($_SESSION['loggedin'])) {?>
 <!-- ----------LOGADO-------- -->
 <!-- ---------Deslogado----------- -->
 
-<!DOCTYPE html>
-<html lang="pt-br">
+
 
 <head>
     <meta charset="UTF-8">
@@ -57,7 +54,7 @@ if (!isset($_SESSION['loggedin'])) {?>
             <button class="btn btn-green fa fa-bars btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Sair</button>
+                <a href="../model/logout.php" ><button class="dropdown-item" type="button" >Sair</button></a>
 
             </div>
         </div>
@@ -68,8 +65,6 @@ if (!isset($_SESSION['loggedin'])) {?>
         <h5 id="teste">Bem vindo!<br> <?php echo $nome ?></h5p>
     </nav>
 </header>
-
-</html>
 
 <?php
 }
