@@ -25,9 +25,9 @@ foreach ($result as $value){
     {  
          echo '<div class="card-deck mx-3 my-3">';
     }?>
-
-            <div class="card">
-                <img class="card-img-top" <?php echo ${"image$r"}?> width="470" height="300" />
+            <div class="col-sm-3">
+            <div class="card h-100">
+                <img class="card-img-top" <?php echo ${"image$r"}?> width="470" height="250" />
                 <div class="card-body">
                     <h5 class="card-title"><?php echo ${"nome$r"} ?> </h5>
                     <h6 class="card-title"><?php echo ${"fornecedor$r"} ?> </h6>
@@ -43,6 +43,7 @@ foreach ($result as $value){
                 </div>
             </div>
             </div>
+            
 <?php
     if ($count%4 == 0)
     {
