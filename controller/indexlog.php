@@ -68,7 +68,7 @@ require '../model/urls.php';?>
         </div>
     </section>
     <br>
-    <div id="category" class="text-center">
+    <!--<div id="category" class="text-center">
         <h3>Produtos Marcados</h3>
     </div> <br>
     <div class="caixa my-5">
@@ -139,7 +139,7 @@ require '../model/urls.php';?>
             </div>
 
         </div>
-    </div>
+    </div>-->
     <div id="category" class="text-center">
         <h3>Produtos</h3>
     </div> <br>
@@ -149,6 +149,6 @@ require '../model/urls.php';?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" <script src="https://use.fontawesome.com/4082de62c3.js"></script>
 </body>
-<?php include '../view/templates/footer.html'; ?>
+<?php include '../view/templates/footer.php'; ?>
 
 </html>
