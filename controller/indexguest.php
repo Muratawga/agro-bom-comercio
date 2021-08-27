@@ -55,6 +55,6 @@ require '../model/urls.php';?>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" <script src="https://use.fontawesome.com/4082de62c3.js"></script>
 </body>
 
-<?php include '../view/templates/footer.html'; ?>
+<?php include '../view/templates/footer.php'; ?>
 
 </html>
