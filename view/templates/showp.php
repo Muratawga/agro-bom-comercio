@@ -25,7 +25,7 @@ foreach ($result as $value){
         echo '<div class="card-deck mx-5 my-5">';
     }?>
             <div class="card">
-                <img class="card-img-top" <?php echo ${"image$r"}?> />
+                <img class="card-img-top" <?php echo ${"image$r"}?> width="470" height="300" />
                 <div class="card-body">
                     <h5 class="card-title"><?php echo ${"nome$r"} ?> </h5>
                     <h6 class="card-title"><?php echo ${"fornecedor$r"} ?> </h6>
