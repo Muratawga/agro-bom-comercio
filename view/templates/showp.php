@@ -18,13 +18,15 @@ if (mysqli_num_rows($result) > 0) {
 } else {    
 }
 
+echo '<div class="caixa my-5">';
+
 foreach ($result as $value){
     if ($count%4 == 1)
     {  
-        echo '<div class="caixa my-5">';
-        echo '<div class="card-deck mx-5 my-5">';
+         echo '<div class="card-deck mx-3 my-3">';
     }?>
-            <div class="card">
+            <div class="col-sm-3">
+            <div class="card h-100" > 
                 <img class="card-img-top" <?php echo ${"image$r"}?> />
                 <div class="card-body">
                     <h5 class="card-title"><?php echo ${"nome$r"} ?> </h5>
@@ -39,6 +41,7 @@ foreach ($result as $value){
                         </a>
                     </p>
                 </div>
+            </div>
             </div>
 <?php
     if ($count%4 == 0)
