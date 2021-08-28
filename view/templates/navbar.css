@@ -9,18 +9,17 @@ body {
 
 /*Start navbar*/
 
-nav#navbarResponsive.navbar.navbar-expand-lg {
-    border-bottom: rgb(97, 146, 1) 5px solid;
-    background-color: #619201;
-}
-
-nav#navbarResponsive.navbar.navbar-expand-lg>div.dropdown>button#dropdownMenu2 {
+nav > .navbar.navbar-expand-lg.navbar-light.bg-light {
     font-size: 24px;
 }
 
-.btn-green {
-    background-color: #619201;
-    color: white;
+
+.bg-light {
+    background-color: #619201!important;
+}
+
+.btn-w {
+    background-color: white;
 }
 
 nav#navbarResponsive.navbar.navbar-expand-lg>img {

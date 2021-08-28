@@ -39,7 +39,7 @@
                             <input type="password" name="passwordrepeat" class="form-control" id="passwordrepeat">
                         </div>
                         <br>
-                        <div class="form-check">
+                        <!--<div class="form-check">
                             <input class="form-check-input" type="radio" name="radio" value="Fornecedor" id="flexRadioDefault1">
                             <label class="form-check-label" for="flexRadioDefault1">
                               Cliente
@@ -50,7 +50,7 @@
                             <label class="form-check-label" for="flexRadioDefault2">
                               Fornecedor
                             </label>
-                        </div>
+                        </div>-->
                         <div id="termsandconditionstext" class="form-text"> Ao criar sua conta você concorda com os <a href="#">Termos e privacidade</a> </div>
                         <br>
                         <input type="submit" value="Registre-se" class="btn btn-dark btn-lg">
