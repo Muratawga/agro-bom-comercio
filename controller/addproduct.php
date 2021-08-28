@@ -17,30 +17,6 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
 
 $email=$_SESSION['name'];  
 
-
-
-if (isset($_GET['id'])){
-    $id=$_GET["id"];
-    $sql = "SELECT * FROM products WHERE id='$id'";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) > 0) {
-        // output data of each row
-        while($row = mysqli_fetch_assoc($result)) {
-            $id = $row['id'];
-            $nomeproduto = $row['name']; 
-            $fornecedor = $row['fornecedor']; 
-            $image = '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"';
-            $preco = $row['lastmonth'];
-            $tm = $row['twomonthago']; 
-            $thm = $row['threemonthago']; 
-            $fm = $row['fourmonthago']; 
-            $fim = $row['fivemonthago']; 
-            $six = $row['sixmonthago']; 
-        }
-    } else { 
-           
-    }
-}
 ?> 
 
 <!DOCTYPE html>
@@ -77,6 +53,8 @@ if (isset($_GET['id'])){
         color: black;
         width: 100px;
     }
+
+
 </style>
 <header>
     <nav class="navbar navbar-expand-lg " id="navbarResponsive">
@@ -98,9 +76,9 @@ if (isset($_GET['id'])){
                     <th scope="col"></th>
                 </tr>
                 <tr>
-                    <form action="<?php echo $url_editp?><?php echo $id?>" method="post" enctype="multipart/form-data">
-                    <td><?php echo $id?></td>
-                    <td><?php echo $nomeproduto?></td>
+                    <form action="../model/addprod.php" method="post" enctype="multipart/form-data">
+                    <td><?php echo "Auto-Incremento"?></td>
+                    <td  style="color: black;"><input type="name" id="nome" name="nome"></td>
                     <td><input type="file" id="my_image" name="my_image"></td>
                     <td><input type="number" id="inputReal" name="valor" placeholder="R$"></td>
                     <td><input type="submit" value="Salvar" class="btn btn-dark btn-lg"></td>

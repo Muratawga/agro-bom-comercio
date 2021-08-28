@@ -1,6 +1,8 @@
 <?php
 require_once '../model/config.php';
 session_start();
+require_once '../model/urls.php';
+
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: sign-in.php');
 
@@ -29,6 +31,7 @@ if (mysqli_num_rows($result) > 0) {
 
 $sql = "SELECT * FROM products WHERE fornecedor='$nome'";
 $result = $conn->query($sql);
+
 
 ?>   
 
@@ -63,6 +66,7 @@ $result = $conn->query($sql);
 <header>
     <nav class="navbar navbar-expand-lg " id="navbarResponsive">
         <a class="btn btn-lg pull-right" href="../index.php" style="background-color: #4c4f52;">Sair</a>
+        <a class="btn btn-lg pull-left" href="../controller/addproduct.php" style="background-color: #4c4f52;">Adcionar Produto</a>
     </nav>
 </header>
 
@@ -89,7 +93,7 @@ $result = $conn->query($sql);
                     <td><?php echo $row["fornecedor"]?></td>
                     <td><?php echo $row["name"]?></td>
                     <td><?php echo $row["lastmonth"]?> $RS</td>
-                    <td><a class="btn btn-link" href="">Editar</a></td>
+                    <td><a class="btn btn-link" href="<?php echo $url_editproduct?><?php echo $row["id"]?>">Editar</a></td>
                     </tr>
 
               

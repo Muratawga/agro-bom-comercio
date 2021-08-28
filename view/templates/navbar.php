@@ -1,9 +1,6 @@
 <?php
 
 if (!isset($_SESSION['loggedin'])) { ?>
-
-
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -156,7 +153,7 @@ if (!isset($_SESSION['loggedin'])) { ?>
             <a href="indexlog.php"><img src="../view/img/logo.png" alt="logo" width="65px"> </a>
             <a class="nav-link btn-primary ml-auto" href="./mainproduct.php" style="background-color: #619201;">Produtos</a>
             <a class="nav-link btn-primary" href="./privacyterms.php" style="background-color: #619201;">Politica e Termos</a>
-            <h5 id="teste">Bem vindo!<br> <?php echo $nome ?></h5p>
+            <h5 id="teste">Bem vindo!<br> </h5p>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNavbar">
             <a class="navbar-brand" href="#"><img src="../view/img/logo.png" alt="logo" width="65px"></a>
@@ -172,7 +169,7 @@ if (!isset($_SESSION['loggedin'])) { ?>
                         <a class="nav-link" href="./privacyterms.php">Politica e Termos</a>
                     </li>
                     <li class="nav-item">
-                        <span class="nav-link active"><h6>Bem vindo(a) <?php echo $nome ?> <a href="../model/logout.php">(sair)</a></h6></span>
+                        <span class="nav-link active"><h6>Bem vindo(a) AQUI O ECHO <a href="../model/logout.php">(sair)</a></h6></span>
                     </li>
                 </ul>
             </div>
