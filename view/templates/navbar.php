@@ -62,7 +62,7 @@ if (!isset($_SESSION['loggedin'])) { ?>
             <button type="button" class="btn btn-light btn-lg"><a href="sign-in.php" class="text-dark"> Entrar</a></button>
         </nav>-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-light" id="mainNavbar">
-            <a class="navbar-brand" href="/"><img src="../view/img/logo.png" alt="logo" width="65px"></a>
+            <a class="navbar-brand" href="../../index.php"><img src="../view/img/logo.png" alt="logo" width="65px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -179,7 +179,7 @@ if (!isset($_SESSION['loggedin'])) { ?>
         </nav>-->
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-light" id="mainNavbar">
-            <a class="navbar-brand" href="/"><img src="../view/img/logo.png" alt="logo" width="65px"></a>
+            <a class="navbar-brand" href="../../index.php"><img src="../view/img/logo.png" alt="logo" width="65px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

@@ -21,24 +21,25 @@ if (mysqli_num_rows($result) > 0) {
 echo '<div class="container">';
 
 foreach ($result as $value){
-    if ($count%4 == 1)
+    if ($count%3 == 1)
     {  
          echo '<div class="card-deck">';
     }?>
-            <div class="card">
+            <div class="col-sm-4 mt-4">
+            <div class="card" >
               <img class="card-img-top" <?php echo ${"image$r"}?> alt="Imagem do produto" height="200px"> <!--Imagem do produto-->
               <div class="card-body">
                 <h5 class="card-title text-center"><?php echo ${"nome$r"} ?></h5> <!--Nome do produto-->
                 <h6 class="text-center"><?php echo ${"fornecedor$r"} ?></h6> <!--Fornecedor-->
                 <div class="text-center">
                     <button type="button" class="btn btn-success"><a href="<?php echo $url_produtos?><?php echo ${"id$r"}?></a>" class="text-light">Visualizar</a></button>
-                </div>
-                
+                </div>    
               </div>
+            </div>
             </div>
             
 <?php
-    if ($count%4 == 0)
+    if ($count%3 == 0)
     {
         echo "</div>";
     }

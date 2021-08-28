@@ -69,28 +69,7 @@
                 
               </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="https://via.placeholder.com/800" alt="Imagem do produto" height="200px"> <!--Imagem do produto-->
-                <div class="card-body">
-                  <h5 class="card-title text-center">Produto</h5> <!--Nome do produto-->
-                  <h6 class="text-center">Fornecedor</h6> <!--Fornecedor-->
-                  <div class="text-center">
-                      <button type="button" class="btn btn-success"><a href="" class="text-light">Visualizar</a></button>
-                  </div>
-                  
-                </div>
-              </div>
-            <div class="card">
-              <img class="card-img-top" src="https://via.placeholder.com/800" alt="Imagem do produto" height="200px"> <!--Imagem do produto-->
-              <div class="card-body">
-                <h5 class="card-title text-center">Produto</h5> <!--Nome do produto-->
-                <h6 class="text-center">Fornecedor</h6> <!--Fornecedor-->
-                <div class="text-center">
-                    <button type="button" class="btn btn-success"><a href="" class="text-light">Visualizar</a></button>
-                </div>
-                
-              </div>
-            </div>
+            
               
             
           </div>
