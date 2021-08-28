@@ -1,8 +1,8 @@
 <?php require_once '../model/config.php';
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: sign-in.php');
-	exit;
+	header('Location: indexguest.php');
+	
 }
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
