@@ -10,10 +10,48 @@ if (!isset($_SESSION['loggedin'])) { ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/view/templates/navbar.css">
+        <link rel="stylesheet" href="./navbar.css" crossorigin="anonymous">
         <title>Agro Bom Negócio - ABC</title>
     </head>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:300&subset=latin-ext);
 
+        body {
+            background-color: #ECECEB;
+            overflow-x: none;
+            font-family: Montserrat;
+            text-align: center;
+        }
+
+
+        /*Start navbar*/
+
+        nav>.navbar.navbar-expand-lg.navbar-light.bg-light {
+            font-size: 24px;
+        }
+
+
+        .bg-light {
+            background-color: #619201 !important;
+        }
+
+        .btn-w {
+            background-color: white;
+        }
+
+        nav#navbarResponsive.navbar.navbar-expand-lg>img {
+            width: 60px;
+            height: 60px;
+            border-color: #619201;
+        }
+
+        #teste {
+            color: white !important;
+        }
+
+
+        /*End navbar*/
+    </style>
     <header>
         <!--<nav class="navbar navbar-expand-lg" id="navbarResponsive">
             <a href="indexguest.php"><img src="../view/img/logo.png" alt="logo" width="65px"> </a>
@@ -39,9 +77,9 @@ if (!isset($_SESSION['loggedin'])) { ?>
                     <a class="" href="sign-in.php"><button type="button" class="btn btn-w btn-lg text-dark">Entrar</button></a>
                 </ul>
             </div>
-            
-                        
-                    
+
+
+
         </nav>
     </header>
 
@@ -61,10 +99,48 @@ if (!isset($_SESSION['loggedin'])) { ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/view/templates/navbar.css">
+        <link rel="stylesheet" href="./navbar.css">
         <title>Agro Bom Negócio - ABC</title>
     </head>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:300&subset=latin-ext);
 
+        body {
+            background-color: #ECECEB;
+            overflow-x: none;
+            font-family: Montserrat;
+            text-align: center;
+        }
+
+
+        /*Start navbar*/
+
+        nav>.navbar.navbar-expand-lg.navbar-light.bg-light {
+            font-size: 24px;
+        }
+
+
+        .bg-light {
+            background-color: #619201 !important;
+        }
+
+        .btn-w {
+            background-color: white;
+        }
+
+        nav#navbarResponsive.navbar.navbar-expand-lg>img {
+            width: 60px;
+            height: 60px;
+            border-color: #619201;
+        }
+
+        #teste {
+            color: white !important;
+        }
+
+
+        /*End navbar*/
+    </style>
     <header>
         <!--<nav class="navbar navbar-expand-lg" id="navbarResponsive">
 
@@ -120,7 +196,7 @@ if (!isset($_SESSION['loggedin'])) { ?>
                     </li>
                     <span class="nav-link active">Bem vindo(a) <?php echo $nome ?> <a href="../model/logout.php" class="text-warning">(sair)</a></span>
                 </ul>
-            </div>      
+            </div>
         </nav>
     </header>
 
