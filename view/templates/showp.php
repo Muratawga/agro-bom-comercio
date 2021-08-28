@@ -18,30 +18,23 @@ if (mysqli_num_rows($result) > 0) {
 } else {    
 }
 
-echo '<div class="caixa my-5">';
+echo '<div class="container">';
 
 foreach ($result as $value){
     if ($count%4 == 1)
     {  
-         echo '<div class="card-deck mx-3 my-3">';
+         echo '<div class="card-deck">';
     }?>
-            <div class="col-sm-3">
-            <div class="card h-100">
-                <img class="card-img-top" <?php echo ${"image$r"}?> width="470" height="250" />
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo ${"nome$r"} ?> </h5>
-                    <h6 class="card-title"><?php echo ${"fornecedor$r"} ?> </h6>
-                    <p class="card-text"></p>
-                    <p class="card-text">
-                        <a href="<?php echo $url_produtos?><?php echo ${"id$r"}?>">
-                            <strong class="btn btn-outline-success">
-                                <h9 style="font-weight: bold; font-family: Montserrat;"> ANALISAR</h9></i
-                              ></strong
-                            >
-                        </a>
-                    </p>
+            <div class="card">
+              <img class="card-img-top" <?php echo ${"image$r"}?> alt="Imagem do produto" height="200px"> <!--Imagem do produto-->
+              <div class="card-body">
+                <h5 class="card-title text-center"><?php echo ${"nome$r"} ?></h5> <!--Nome do produto-->
+                <h6 class="text-center"><?php echo ${"fornecedor$r"} ?></h6> <!--Fornecedor-->
+                <div class="text-center">
+                    <button type="button" class="btn btn-success"><a href="<?php echo $url_produtos?><?php echo ${"id$r"}?></a>" class="text-light">Visualizar</a></button>
                 </div>
-            </div>
+                
+              </div>
             </div>
             
 <?php
@@ -52,7 +45,7 @@ foreach ($result as $value){
     $count++;
     $r++;
 }
-if ($count%4 != 1) echo "</div>";
+echo "</div>";
 
 
 
