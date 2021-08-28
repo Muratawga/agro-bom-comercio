@@ -16,7 +16,7 @@ if (mysqli_num_rows($result) > 0) {
         ${"image$i"} = '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"';
         ?>
         <div class="card">
-              <img class="card-img-top" <?php echo ${"image$i"}?> alt="Imagem do produto" height="200px"> <!--Imagem do produto-->
+              <img class="card-img-top" <?php echo ${"image$i"}?> alt="Imagem do produto" height="150px"> <!--Imagem do produto-->
               <div class="card-body">
                 <h5 class="card-title text-center"><?php echo ${"nome$i"} ?></h5> <!--Nome do produto-->
                 <h6 class="text-center"><?php echo ${"fornecedor$i"} ?></h6> <!--Fornecedor-->
