@@ -25,7 +25,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
                     $stmt->fetch();
 
                     session_regenerate_id();
-                    $_SESSION['loggedin'] = TRUE;
+                    $_SESSION['admin'] = TRUE;
                     $_SESSION['name'] = $_POST['email'];
                     $_SESSION['id'] = $id;
                     header('Location: ../controller/crud.php');

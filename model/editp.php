@@ -4,6 +4,18 @@ require './config.php';
 $id = $_GET['id'];
 $valor = $_POST['valor'];
 
+session_start();
+if (!isset($_SESSION['admin'])) {
+	header('Location: sign-in.php');
+
+}
+
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+    // last request was more than 30 minutes ago
+    session_unset();     // unset $_SESSION variable for the run-time 
+    session_destroy();   // destroy session data in storage
+  }
+  $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 
 if (isset($_FILES['my_image']) && isset($_POST['valor'])) {
 

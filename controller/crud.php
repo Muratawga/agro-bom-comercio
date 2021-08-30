@@ -3,9 +3,8 @@ require_once '../model/config.php';
 session_start();
 require_once '../model/urls.php';
 
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: sign-in.php');
-
+if (!isset($_SESSION['admin'])) {
+	header('Location: logincrud.php');
 }
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
@@ -94,6 +93,7 @@ $result = $conn->query($sql);
                     <td><?php echo $row["name"]?></td>
                     <td><?php echo $row["lastmonth"]?> $RS</td>
                     <td><a class="btn btn-link" href="<?php echo $url_editproduct?><?php echo $row["id"]?>">Editar</a></td>
+                    <td><a class="btn btn-link" href="<?php echo $url_deleteproduct?><?php echo $row["id"]?>">Deletar</a></td>
                     </tr>
 
               

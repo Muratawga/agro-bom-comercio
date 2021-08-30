@@ -3,7 +3,7 @@ require_once '../model/config.php';
 require_once '../model/urls.php';
 
 session_start();
-if (!isset($_SESSION['loggedin'])) {
+if (!isset($_SESSION['admin'])) {
 	header('Location: sign-in.php');
 
 }
