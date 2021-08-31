@@ -189,6 +189,9 @@ if (!isset($_SESSION['loggedin'])) { ?>
                         <a class="nav-link text-light" href="./privacyterms.php">Politica e Termos</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-light" href="./wishlist.php">Lista de Desejos</a>
+                    </li>
+                    <li class="nav-item">
                         <span class="nav-link text-dark">|</span>
                     </li>
                     <span class="nav-link active">Bem vindo(a) <?php echo $nome ?> <a href="../model/logout.php" class="text-warning">(sair)</a></span>
