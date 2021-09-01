@@ -11,12 +11,24 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="display-3 text-center bg-success text-light p-5">Termos de Privacidade</h1>
-    </header>
+    <style>
+        .bg-light {
+            background-color: #619201 !important;
+        }
 
+        #backLink {
+            font-size: 20px;
+        }
+    </style>
+    <header>
+        <h1 class="display-3 text-center bg-light text-light p-5">Termos de Privacidade</h1>
+    </header>
+    <br>
     <section id="privacyTerms">
         <div class="container">
+        <a href="javascript:history.back()" id="backLink">Voltar</a>
+        <br>
+        <br>
             <h2>Política Privacidade</h2>
             <p>A sua privacidade é importante para nós. É política do respeitar a sua privacidade em relação a qualquer
                 informação sua que possamos coletar no site <a href=></a>, e outros sites que possuímos e operamos.</p>
