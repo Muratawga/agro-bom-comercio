@@ -82,6 +82,7 @@ $number1 = 1;
                             <div class="main_image"> <?php echo $image?> id="main_product_image" width="350"> </div>
                             
                         </div>
+                        <button type="button" class="btn btn-info"><a href="#" class="text-light">Adicionar na lista de desejos</a></button>
                     </div>
                     <div class="col-md-6">
                         <div class="p-3 right-side">
@@ -105,6 +106,7 @@ $number1 = 1;
     </section>
     <h1 class="text-center">Semelhantes</h1>
         <?php include '../view/templates/randomproduct.php' ?>
+        <br>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js" integrity="sha256-bC3LCZCwKeehY6T4fFi9VfOU0gztUa+S4cnkIhVPZ5E=" crossorigin="anonymous"></script>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
