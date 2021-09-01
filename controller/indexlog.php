@@ -35,7 +35,7 @@ if (mysqli_num_rows($result) > 0) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../view/styles/style.css">
-    <title>Agro Bom Negócio - ABC</title>
+    <title>Agro Bom Comércio - ABC</title>
 </head>
 
 <?php include '../view/templates/navbar.php'; ?>

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../view/styles/style.css">
-    <title>Agro Bom Negócio - ABC</title>
+    <title>Agro Bom Comércio - ABC</title>
 </head>
 
 <body>
@@ -46,7 +46,9 @@
         <h3>Produtos</h3>
     </div> <br>
 
-    <?php include '../view/templates/randomproduct.php' ?>
+    <div class="mb-4">
+        <?php include '../view/templates/randomproduct.php' ?>
+    </div>
     
     <script src="https://use.fontawesome.com/4082de62c3.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
