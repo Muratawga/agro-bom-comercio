@@ -26,7 +26,7 @@ $email=$_SESSION['name'];
     <title>Crud</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -53,13 +53,28 @@ $email=$_SESSION['name'];
         color: black;
         width: 100px;
     }
+    .bg-green {
+        background-color: #619201 !important;
+    }
 
 
 </style>
 <header>
-    <nav class="navbar navbar-expand-lg " id="navbarResponsive">
-        <a class="btn btn-lg pull-right" href="../index.php" style="background-color: #4c4f52;">Sair</a>
-    </nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary bg-green">
+    <div class="container-fluid container">
+        <a class="navbar-brand abs" href="#"><strong>ABC</strong></a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapseNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="../index.php" data-bs-target="#myModal" data-bs-toggle="modal">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 </header>
 
 <body>
