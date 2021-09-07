@@ -66,9 +66,6 @@ if (mysqli_num_rows($result) > 0) {
             </a>
         </div>
     </section>
-    <div id="bannerImage">
-    <img class="d-block w-100" src="../view/img/banner.jpg" alt="First slide">
-    </div>
     <br>
     <!--<div id="category" class="text-center">
         <h3>Produtos Marcados</h3>
