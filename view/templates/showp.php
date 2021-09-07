@@ -18,12 +18,11 @@ if (mysqli_num_rows($result) > 0) {
 } else {    
 }
 
-echo '<div class="container">';
 
 foreach ($result as $value){
     if ($count%3 == 1)
     {  
-         echo '<div class="card-deck">';
+         echo '<div class="card-deck container">';
     }?>
             <div class="col-sm-4 mt-4">
             <div class="card" >
