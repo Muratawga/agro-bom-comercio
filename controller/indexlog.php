@@ -43,17 +43,17 @@ if (mysqli_num_rows($result) > 0) {
 
 
 
-    <!--<section id="carousel">
+    <section id="carousel">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="../view/img/bannerzasso.png" alt="First slide">
+                    <img class="d-block w-100" src="../view/img/banner.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../view/img/bannerzasso.png" alt="Second slide">
+                    <img class="d-block w-100" src="../view/img/banner.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../view/img/bannerzasso.png" alt="Third slide">
+                    <img class="d-block w-100" src="../view/img/banner.jpg" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -65,7 +65,7 @@ if (mysqli_num_rows($result) > 0) {
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </section>-->
+    </section>
     <div id="bannerImage">
     <img class="d-block w-100" src="../view/img/banner.jpg" alt="First slide">
     </div>
