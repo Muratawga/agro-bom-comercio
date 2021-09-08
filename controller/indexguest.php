@@ -22,7 +22,7 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="../view/img/banner.jpg" alt="First slide">
+                    <img class="d-block w-100" src="https://3at6ja2ykxb3bo6632sdol54-wpengine.netdna-ssl.com/wp-content/uploads/2020/08/Email-signature-banner-example_Compliance-credentials.png" alt="First slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="../view/img/banner.jpg" alt="Second slide">

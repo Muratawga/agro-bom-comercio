@@ -69,7 +69,7 @@ if (isset($_FILES['my_image']) && isset($_POST['valor']) && isset($_POST['nome']
 
                     ?>
                     <script>
-                    javascript:alert('Arquivo editado!');
+                    javascript:alert('Produto inserido!');
                     javascript:window.location='../controller/crud.php';
                     </script>
                     <?php
@@ -85,7 +85,7 @@ if (isset($_FILES['my_image']) && isset($_POST['valor']) && isset($_POST['nome']
 	}else {
             ?>
             <script>
-            javascript:alert('Erro desconhecido!');
+            javascript:alert('Erro desconhecido');
             javascript:window.location='../controller/crud.php';
             </script>
             <?php

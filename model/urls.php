@@ -14,5 +14,8 @@ $url_index= "http://$_SERVER[HTTP_HOST]/index.php";
 
 $url_editp= "http://$_SERVER[HTTP_HOST]/model/editp.php?id=";
 
+$url_addwish= "http://$_SERVER[HTTP_HOST]/model/addwish.php?id=";
+
+$url_generatepdf= "http://$_SERVER[HTTP_HOST]/model/generatepdf.php?id=";
 
 ?>

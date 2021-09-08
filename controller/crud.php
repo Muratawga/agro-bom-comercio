@@ -103,6 +103,7 @@ $result = $conn->query($sql);
                     <th scope="col">Fornecedor</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Preço</th>
+                    <th scope = "col">Em alguma lista de desejo</th>
                 </tr>
             </thead>
             <tbody>
@@ -116,8 +117,10 @@ $result = $conn->query($sql);
                     <td><?php echo $row["fornecedor"]?></td>
                     <td><?php echo $row["name"]?></td>
                     <td><?php echo $row["lastmonth"]?> $RS</td>
+                    <td><?php echo $row["addedto"]?></td>
                     <td><a class="btn btn-link" href="<?php echo $url_editproduct?><?php echo $row["id"]?>">Editar</a></td>
                     <td><a class="btn btn-link" href="<?php echo $url_deleteproduct?><?php echo $row["id"]?>">Deletar</a></td>
+                    <td><a class="btn btn-link" href="<?php echo $url_generatepdf?><?php echo $row["id"]?>">Gerar Relatório</a></td>
                     </tr>
 
               

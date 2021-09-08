@@ -17,6 +17,11 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
 
 $email=$_SESSION['name'];  
 
+	?>
+    <script>
+    javascript:alert('Caso só vá editar um componente, repita o mesmo, se não, esse não será enviado');
+    </script>
+<?php
 
 
 if (isset($_GET['id'])){

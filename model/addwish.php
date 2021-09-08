@@ -14,21 +14,22 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
   $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 
 
-$email=$_SESSION['name'];  
+$email=$_SESSION['name']; 
 
 
 $id = $_GET['id'];
 
-$sql = "UPDATE users SET wishlist = REPLACE(wishlist, '$id', '') WHERE email='$email'";
+$sql = "UPDATE users SET wishlist = CONCAT(wishlist, ' $id') WHERE email='$email'";
 mysqli_query($conn, $sql);
 
-$sql = "UPDATE products SET addedto = addedto-1 WHERE id='$id'";
+$sql = "UPDATE products SET addedto = addedto+1 WHERE id='$id'";
 mysqli_query($conn, $sql);
 
 ?>
- <script>
-javascript:alert('Produto removido!');
+
+
+<script>
+javascript:alert('Produto inserido!');
 javascript:window.location='../controller/wishlist.php';
 </script>
-   
 
