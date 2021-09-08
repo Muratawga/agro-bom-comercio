@@ -5,7 +5,7 @@ require_once '../model/urls.php';
 session_start();
 if (!isset($_SESSION['admin'])) {
 	header('Location: sign-in.php');
-
+    exit;
 }
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
