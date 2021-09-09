@@ -83,3 +83,7 @@ nav#navbarResponsive.navbar.navbar-expand-lg>img {
     width: 150px;
     border-radius: 0px !important
 }
+
+.bg-green {
+    background-color: #619201;
+}
