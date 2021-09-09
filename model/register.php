@@ -5,7 +5,7 @@ if (strlen($_POST['password']) <= 7){
     ?>
     <script>
     javascript:alert('Sua senha é muito curta! Coloque no mínimo 8 caracteres');
-    javascript:window.location='../public/register.html';
+    javascript:window.location='../controller/register.php';
     </script>
     <?php
 }else{
@@ -14,7 +14,7 @@ if (strlen($_POST['password']) <= 7){
             ?>
             <script>
             javascript:alert('Preencha os campos corretamente!');
-            javascript:window.location='register.html';
+            javascript:window.location='register.php';
             </script>
             <?php
         }
@@ -36,7 +36,7 @@ if (strlen($_POST['password']) <= 7){
             ?>
             <script>
             javascript:alert('Conta criada com sucesso!');
-            javascript:window.location='../controller/sign-in.html';
+            javascript:window.location='../controller/sign-in.php';
             </script>
             <?php
             
@@ -45,7 +45,7 @@ if (strlen($_POST['password']) <= 7){
             ?>
             <script>
             javascript:alert('Ja existe esse usuario!');
-            javascript:window.location='../controller/register.html';
+            javascript:window.location='../controller/register.php';
             </script>
             <?php
         }
@@ -54,7 +54,7 @@ if (strlen($_POST['password']) <= 7){
         ?>
         <script>
         javascript:alert('As senhas não coincidem');
-        avascript:window.location='../controller/register.html';
+        avascript:window.location='../controller/register.php';
         
         </script>
         <?php

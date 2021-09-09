@@ -82,7 +82,7 @@ $number1 = 1;
                             <div class="main_image"> <?php echo $image?> id="main_product_image" width="350"> </div>
                             
                         </div>
-                        <button type="button" class="btn btn-info"><a href="#" class="text-light">Adicionar na lista de desejos</a></button>
+                        <button type="button" class="btn btn-info"><a href="<?php echo $url_addwish?><?php echo $_GET["id"]?>" class="text-light">Adicionar na lista de desejos</a></button>
                     </div>
                     <div class="col-md-6">
                         <div class="p-3 right-side">
@@ -93,7 +93,7 @@ $number1 = 1;
                                 <p><?php echo $fornecedor?></p>
                             </div>
                             <h3><?php echo $preco?> R$</h3>
-                            <form action="/action_page.php">
+                            <form action="">
                                 <!--<input type="checkbox" id="flag1" name="flag1" value="Flag"><i class="fa fa-flag fa-lg"></i>
                                 <label for="flag1"> <h4> Marcar com uma bandeira</h4></label><br>-->
                                 <div class="ratings d-flex flex-row align-items-center">

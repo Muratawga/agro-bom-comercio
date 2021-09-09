@@ -21,9 +21,14 @@ $id = $_GET['id'];
 
 $sql = "UPDATE users SET wishlist = REPLACE(wishlist, '$id', '') WHERE email='$email'";
 mysqli_query($conn, $sql);
-   
+
+$sql = "UPDATE products SET addedto = addedto-1 WHERE id='$id'";
+mysqli_query($conn, $sql);
+
 ?>
-<script>
+ <script>
 javascript:alert('Produto removido!');
 javascript:window.location='../controller/wishlist.php';
 </script>
+   
+

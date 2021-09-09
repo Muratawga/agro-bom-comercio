@@ -80,7 +80,7 @@ $email=$_SESSION['name'];
 <body>
 
     <div class="container">
-        <h3 class="text-center">Editar</h3>
+        <h3 class="text-center">Inserir Produto</h3>
         <table class="table table-dark">
             <thead>
                 <tr>

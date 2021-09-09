@@ -5,7 +5,7 @@ require_once '../model/urls.php';
 session_start();
 if (!isset($_SESSION['admin'])) {
 	header('Location: sign-in.php');
-
+    exit;
 }
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
@@ -17,6 +17,11 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
 
 $email=$_SESSION['name'];  
 
+	?>
+    <script>
+    javascript:alert('Caso só vá editar um componente, repita o mesmo, se não, esse não será enviado');
+    </script>
+<?php
 
 
 if (isset($_GET['id'])){

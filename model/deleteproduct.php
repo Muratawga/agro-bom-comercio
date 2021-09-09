@@ -2,8 +2,12 @@
 
 require './config.php';
 session_start();
-if (!isset($_SESSION['admin'])) {
-	header('Location: logincrud.php');
+if (!isset($_SESSION['admin'])) {?>
+  <script>
+	javascript:window.location='../controller/crud.php';
+  </script>
+  <?php
+  exit;
 }
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
@@ -23,6 +27,7 @@ $sql = "DELETE FROM products WHERE id='$id'";
 mysqli_query($conn, $sql);
    
 ?>
+
 <script>
 javascript:alert('Produto deletado!');
 javascript:window.location='../controller/crud.php';
