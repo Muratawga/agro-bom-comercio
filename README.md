@@ -1,16 +1,16 @@
-### 🐱‍🐉 Projeto Agro Bom Comércio - ABC
+### 🐱‍🐉 Projeto Agro Bom Negócio - ABC
 ##### *Desenvolvido e entregue por [Phog Tech](https://phogtech.vercel.app/)*
-#### Como commitar?
-Os commits serão organizados no padrão *Conventional Commits* para melhor organização e leitura do histórico de modificações. A documentação de como seguir essa estrutura pode ser lida [aqui](https://www.conventionalcommits.org/pt-br/v1.0.0/).
+#### 🤯 Processo de desenvolvimento
+O desenvolvimento foi realizado inicialmente com o front-end sendo desenvolvido pelo [Murata](https://github.com/Muratawga), criando a estilização a identidade visual do projeto. Paralelamente, [Vitor](https://github.com/vit0rr) ajudava com problemas específicos no front-end, implementou o gráfico de preços para os produtos e realizou testes de segurança para corrigir falhas SQL, XSS etc.
+No back-end, [Pedro](https://github.com/dgtyPedro) desenvolveu o banco de dados e suas funcionalidades usando PHP e SQL, criando uma relação orgânica com o front-end durante todo o projeto.
 
-#### 🐱‍👤 GitHub Projects
-> Vídeo para referência do  [Dev Soutinho](https://www.youtube.com/watch?v=WWLH2RgaBwE&t=693s&ab_channel=DevSoutinho)
+#### 🐱‍👤Como funciona tecnicamente o projeto?
+O projeto Agro Bom Comércio consiste numa loja, onde é possível inserir produtos, remover, adicionar na lista de desejos e consultar gráfico de preços.
 
-A aba Projects do GitHub serve para organizar as tarefas da equipe em algum projeto. É possível adicionar o que fazer, foi feito, corrigido etc. Eles trabalham diretamente com issues. Ou seja:
-- Crie uma issue para cada modificação que for realizar no projeto
-- Adicione essa issue no Projects
+***No front-end:***
+O JavaScript teve um papel importante no gráfico de preços. Basicamente, através da biblioteca [Chart.js](https://www.chartjs.org/) configuramos para ela trabalhar com variáveis do PHP. Dessa forma, os preços ficam atualizados mantendo um histórico em tempo real, sendo possível modifica-lo com o Crud.
 
-Caso a issue seja completa, feche, marque como solucionada e automaticamente será movido para a tabela de tarefas concluídas no Projects.
-
-#### 🐱‍👓 Organização do código
-O código deve ser mantido usando tags, classes, ids, variáveis e afins em inglês.
+***No back-end:***
+Com PHP, foi desenvolvido a exibição dinâmica de produtos na home do site. Também foi criado um CRUD, por onde é feito toda a configuração dos produtos, como nome, imagem e ID dos produtos de forma automática, assim como os preços, sendo possível armazena-los numa variável para que sejam passados para o gráfico de preço em cada produto.
+Com isso, existe uma lista de desejos também usando o CRUD, onde é possível consultar todos os produtos adicionados, remove-los e acessar a página única deles.
+O cliente também pediu um gerador de pdfs, que usa a biblioteca mpdf, nela o PHP consegue criar um arquivo HTML que após o processo é convertido em PDF e posto para download no navegador do usuário.
